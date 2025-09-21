@@ -60,7 +60,7 @@ const ChatMessagesScreen = () => {
   const fetchMessages = async () => {
     try {
       const response = await fetch(
-        `http://10.187.180.32:3000/messages/${userId}/${recepientId}`
+        `https://chitchat-w2gg.onrender.com/messages/${userId}/${recepientId}`
       );
       const data = await response.json();
 
@@ -82,7 +82,7 @@ const ChatMessagesScreen = () => {
     const fetchRecepientData = async () => {
       try {
         const response = await fetch(
-          `http://10.187.180.32:3000/user/${recepientId}`
+          `https://chitchat-w2gg.onrender.com/user/${recepientId}`
         );
         const data = await response.json();
         setRecepientData(data);
@@ -114,7 +114,7 @@ const ChatMessagesScreen = () => {
       // for (let pair of formData.entries()) {
       //   console.log(pair[0], pair[1]);
       // }
-      const response = await fetch("http://10.187.180.32:3000/messages", {
+      const response = await fetch("https://chitchat-w2gg.onrender.com/messages", {
         method: "POST",
         body: formData,
       });
@@ -192,7 +192,7 @@ const ChatMessagesScreen = () => {
 
   const deleteMessages = async (messageIds) => {
     try {
-      const response = await fetch("http://10.187.180.32:3000/deleteMessages", {
+      const response = await fetch("https://chitchat-w2gg.onrender.com/deleteMessages", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -349,7 +349,7 @@ const ChatMessagesScreen = () => {
           }
 
           if (item.messageType === "image") {
-            const baseUrl = "http://10.187.180.32:3000/files/";
+            const baseUrl = "https://chitchat-w2gg.onrender.com/files/";
             const imageUrl = item.imageUrl;
             const filename = imageUrl.split("\\").pop();
             const source = { uri: baseUrl + filename };

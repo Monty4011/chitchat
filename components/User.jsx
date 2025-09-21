@@ -15,7 +15,7 @@ const User = ({ item }) => {
   const fetchFriendRequests = async () => {
     try {
       const response = await fetch(
-        `http://10.187.180.32:3000/friend-requests/sent/${userId}`
+        `https://chitchat-w2gg.onrender.com/friend-requests/sent/${userId}`
       );
 
       const data = await response.json();
@@ -32,7 +32,7 @@ const User = ({ item }) => {
   const fetchUserFriends = async () => {
     try {
       const response = await fetch(
-        `http://10.187.180.32:3000/friends/${userId}`
+        `https://chitchat-w2gg.onrender.com/friends/${userId}`
       );
 
       const data = await response.json();
@@ -50,7 +50,7 @@ const User = ({ item }) => {
   const fetchReceivedFriendRequests = async () => {
     try {
       const response = await fetch(
-        `http://10.187.180.32:3000/friend-requests/received/${userId}`
+        `https://chitchat-w2gg.onrender.com/friend-requests/received/${userId}`
       );
       const data = await response.json();
       if (response.status === 200) {
@@ -68,7 +68,7 @@ const User = ({ item }) => {
 
   const sendFriendRequest = async (currentUserId, selectedUserId) => {
     try {
-      const response = await fetch("http://10.187.180.32:3000/friend-request", {
+      const response = await fetch("https://chitchat-w2gg.onrender.com/friend-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const User = ({ item }) => {
     console.log("accepting friend request");
     try {
       const response = await fetch(
-        "http://10.187.180.32:3000/friend-request/accept",
+        "https://chitchat-w2gg.onrender.com/friend-request/accept",
         {
           method: "POST",
           headers: {

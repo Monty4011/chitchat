@@ -27,7 +27,7 @@ const RegisterScreen = () => {
     };
 
     axios
-      .post("http://10.187.180.32:3000/register", user, {
+      .post("https://chitchat-w2gg.onrender.com/register", user, {
         headers: { "Content-Type": "application/json" }
       })
       .then((response) => {

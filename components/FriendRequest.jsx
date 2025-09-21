@@ -10,7 +10,7 @@ const FriendRequest = ({ item, friendRequests, setFriendRequests }) => {
   const acceptRequest = async (friendRequestId) => {
     try {
       const response = await fetch(
-        "http://10.187.180.32:3000/friend-request/accept",
+        "https://chitchat-w2gg.onrender.com/friend-request/accept",
         {
           method: "POST",
           headers: {

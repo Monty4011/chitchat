@@ -11,7 +11,7 @@ const UserChat = ({ item }) => {
   const fetchMessages = async () => {
     try {
       const response = await fetch(
-        `http://10.187.180.32:3000/messages/${userId}/${item._id}`
+        `https://chitchat-w2gg.onrender.com/messages/${userId}/${item._id}`
       );
       const data = await response.json();
       if (response.status === 200) {

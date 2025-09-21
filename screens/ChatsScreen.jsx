@@ -9,31 +9,12 @@ const ChatsScreen = () => {
   const { userId, setUserId } = useContext(UserType);
   const navigation = useNavigation();
 
-  // useEffect(() => {
-  //   const acceptedFriendsList = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `http://10.187.180.32:3000/accepted-friends/${userId}`
-  //       );
-  //       const data = await response.json();
-
-  //       if (response.status === 200) {
-  //         setAcceptedFriends(data);
-  //       }
-  //     } catch (error) {
-  //       console.log("error showing the accepted friends", error);
-  //     }
-  //   };
-
-  //   acceptedFriendsList();
-  // }, []);
-
   useFocusEffect(
     useCallback(() => {
       const acceptedFriendsList = async () => {
         try {
           const response = await fetch(
-            `http://10.187.180.32:3000/accepted-friends/${userId}`
+            `https://chitchat-w2gg.onrender.com/accepted-friends/${userId}`
           );
           const data = await response.json();
 

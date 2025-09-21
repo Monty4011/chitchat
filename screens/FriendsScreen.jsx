@@ -18,7 +18,7 @@ const FriendsScreen = () => {
   const fetchFriendRequests = async () => {
     try {
       const response = await axios.get(
-        `http://10.187.180.32:3000/friend-request/${userId}`
+        `https://chitchat-w2gg.onrender.com/friend-request/${userId}`
       );
       if (response.status === 200) {
         const friendRequestsData = response.data.map((friendRequest) => ({
@@ -38,7 +38,7 @@ const FriendsScreen = () => {
   const fetchUserFriends = async () => {
     try {
       const response = await fetch(
-        `http://10.187.180.32:3000/friends/${userId}`
+        `https://chitchat-w2gg.onrender.com/friends/${userId}`
       );
 
       const data = await response.json();

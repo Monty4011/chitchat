@@ -43,7 +43,7 @@ const LoginScreen = () => {
     };
 
     axios
-      .post("http://10.187.180.32:3000/login", user)
+      .post("https://chitchat-w2gg.onrender.com/login", user)
       .then((response) => {
         // console.log(response);
         const token = response.data.token;

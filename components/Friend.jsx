@@ -12,7 +12,7 @@ const Friend = ({ item }) => {
     const fetchUserFriends = async () => {
       try {
         const response = await fetch(
-          `http://10.187.180.32:3000/friends/${userId}`
+          `https://chitchat-w2gg.onrender.com/friends/${userId}`
         );
 
         const data = await response.json();

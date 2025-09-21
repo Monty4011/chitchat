@@ -75,7 +75,7 @@ const HomeScreen = () => {
       setUserId(userId);
 
       const response = await axios.get(
-        `http://10.187.180.32:3000/users/${userId}`
+        `https://chitchat-w2gg.onrender.com/users/${userId}`
       );
       setUsers(response.data);
     } catch (error) {
